@@ -9,7 +9,7 @@ test:
   script:
     - yarn install
     - yarn lint
-    - yarn test && yarn test --project a-lib
+    - yarn test-ci && yarn test-ci --project a-lib
   cache:
     paths:
       - node_modules
