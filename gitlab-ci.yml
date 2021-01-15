@@ -1,0 +1,15 @@
+stages:
+  - test
+
+test:
+  stage: test
+  image: node:12-alpine
+  tags:
+    - docker
+  script:
+    - yarn install
+    - yarn lint
+    - yarn test && yarn test --project a-lib
+  cache:
+    paths:
+      - node_modules
