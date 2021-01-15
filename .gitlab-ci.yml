@@ -4,8 +4,6 @@ stages:
 test:
   stage: test
   image: node:14.15.4-alpine
-  addons:
-    chrome: stable
   script:
     - yarn install
     - yarn lint
