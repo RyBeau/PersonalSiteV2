@@ -1,7 +1,5 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-import { env } from 'process';
-env.CHROME_BIN = require('puppeteer').executablePath();
 
 export default function (config) {
   config.set({
@@ -36,7 +34,13 @@ export default function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'ChromeHeadless'],
+    browsers: ['Chrome', 'ChromiumNoSandbox'],
+    customLaunchers: {
+      ChromiumNoSandbox: {
+        base: 'ChromiumHeadless',
+        flags: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-translate', '--disable-extensions'],
+      },
+    },
     singleRun: false,
     restartOnFileChange: true,
   });

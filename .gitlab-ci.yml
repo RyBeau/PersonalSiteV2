@@ -1,9 +1,8 @@
 stages:
   - test
-
 test:
   stage: test
-  image: node:14.15.4-alpine
+  image: rastasheep/alpine-node-chromium:8-alpine
   script:
     - yarn install
     - yarn lint
