@@ -30,15 +30,17 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": ["projects/a-lib/tsconfig.lib.json", "projects/a-lib/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/a-lib/**/*.ts",
+              "projects/a-lib/**/*.html"
+            ]
           }
         }
       }
     },
-    "PersonalSite": {
+    "personal-site": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -58,8 +60,13 @@
             "polyfills": "projects/personal-site/src/polyfills.ts",
             "tsConfig": "projects/personal-site/tsconfig.app.json",
             "aot": true,
-            "assets": ["projects/personal-site/src/favicon.ico", "projects/personal-site/src/assets"],
-            "styles": ["projects/personal-site/src/styles.scss"],
+            "assets": [
+              "projects/personal-site/src/favicon.ico",
+              "projects/personal-site/src/assets"
+            ],
+            "styles": [
+              "projects/personal-site/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -116,16 +123,23 @@
             "polyfills": "projects/personal-site/src/polyfills.ts",
             "tsConfig": "projects/personal-site/tsconfig.spec.json",
             "karmaConfig": "projects/personal-site/karma.conf.js",
-            "assets": ["projects/personal-site/src/favicon.ico", "projects/personal-site/src/assets"],
-            "styles": ["projects/personal-site/src/styles.scss"],
+            "assets": [
+              "projects/personal-site/src/favicon.ico",
+              "projects/personal-site/src/assets"
+            ],
+            "styles": [
+              "projects/personal-site/src/styles.scss"
+            ],
             "scripts": []
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": ["projects/personal-site/tsconfig.app.json", "projects/personal-site/tsconfig.spec.json", "projects/personal-site/e2e/tsconfig.json"],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/personal-site/**/*.ts",
+              "projects/personal-site/**/*.html"
+            ]
           }
         },
         "e2e": {
