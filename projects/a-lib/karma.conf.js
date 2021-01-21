@@ -34,11 +34,11 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'ChromiumNoSandbox'],
+    browsers: ['Chrome', 'ChromiumHeadlessNoSandbox'],
     customLaunchers: {
-      ChromiumNoSandbox: {
+      ChromiumHeadlessNoSandbox: {
         base: 'ChromiumHeadless',
-        flags: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-translate', '--disable-extensions'],
+        flags: ['--no-sandbox'],
       },
     },
     singleRun: false,
