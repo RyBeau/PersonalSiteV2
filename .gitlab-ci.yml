@@ -5,7 +5,7 @@ test:
   stage: test
   image: node:14.15.4-alpine
   before_script:
-    - apk add google-chrome-stable
+    - apk add chromium
   script:
     - yarn install
     - yarn lint
