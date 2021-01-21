@@ -4,8 +4,6 @@ stages:
 test:
   stage: test
   image: node:14.15.4-alpine
-  variables:
-    CHROME_ENV: $CHROME_BIN
   script:
     - yarn install
     - yarn lint
