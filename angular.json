@@ -32,10 +32,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/a-lib/**/*.ts",
-              "projects/a-lib/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/a-lib/**/*.ts", "projects/a-lib/**/*.html"]
           }
         }
       }
@@ -60,13 +57,8 @@
             "polyfills": "projects/personal-site/src/polyfills.ts",
             "tsConfig": "projects/personal-site/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/personal-site/src/favicon.ico",
-              "projects/personal-site/src/assets"
-            ],
-            "styles": [
-              "projects/personal-site/src/styles.scss"
-            ],
+            "assets": ["projects/personal-site/src/favicon.ico", "projects/personal-site/src/assets"],
+            "styles": ["projects/personal-site/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -123,23 +115,15 @@
             "polyfills": "projects/personal-site/src/polyfills.ts",
             "tsConfig": "projects/personal-site/tsconfig.spec.json",
             "karmaConfig": "projects/personal-site/karma.conf.js",
-            "assets": [
-              "projects/personal-site/src/favicon.ico",
-              "projects/personal-site/src/assets"
-            ],
-            "styles": [
-              "projects/personal-site/src/styles.scss"
-            ],
+            "assets": ["projects/personal-site/src/favicon.ico", "projects/personal-site/src/assets"],
+            "styles": ["projects/personal-site/src/styles.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/personal-site/**/*.ts",
-              "projects/personal-site/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/personal-site/**/*.ts", "projects/personal-site/**/*.html"]
           }
         },
         "e2e": {

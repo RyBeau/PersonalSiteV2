@@ -8,9 +8,8 @@ describe('ALibComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ALibComponent ]
-    })
-    .compileComponents();
+      declarations: [ALibComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
