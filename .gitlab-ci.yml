@@ -1,5 +1,6 @@
 stages:
   - test
+  - build
 
 test:
   stage: test
@@ -11,5 +12,15 @@ test:
     - yarn lint
     - yarn test-ci
   cache:
+    key: yarn-path
     paths:
       - node_modules
+
+build:
+  stage: build
+  script:
+    - yarn build-ci
+  cache:
+  key: yarn-path
+  paths:
+    - node_modules
