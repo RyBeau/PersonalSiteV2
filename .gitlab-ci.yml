@@ -21,6 +21,6 @@ build:
   script:
     - yarn build-ci
   cache:
-  key: yarn-path
-  paths:
-    - node_modules
+    key: yarn-path
+    paths:
+      - node_modules
