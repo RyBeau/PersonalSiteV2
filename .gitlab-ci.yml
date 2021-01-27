@@ -1,0 +1,26 @@
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: node:14.15.4-alpine
+  before_script:
+    - apk add chromium
+  script:
+    - yarn install
+    - yarn lint
+    - yarn test-ci
+  cache:
+    key: yarn-path
+    paths:
+      - node_modules
+
+build:
+  stage: build
+  script:
+    - yarn build-ci
+  cache:
+    key: yarn-path
+    paths:
+      - node_modules

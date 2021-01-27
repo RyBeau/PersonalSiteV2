@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "mikael.angular-beastcode",
+        "mike-co.import-sorter",
+        "mrmlnc.vscode-attrs-sorter",
+        "unional.vscode-sort-package-json"
+    ]
+}
