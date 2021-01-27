@@ -6,6 +6,11 @@
     "a-lib": {
       "projectType": "library",
       "root": "projects/a-lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "sourceRoot": "projects/a-lib/src",
       "prefix": "lib",
       "architect": {
