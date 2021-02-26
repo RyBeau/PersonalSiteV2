@@ -2,8 +2,12 @@
 @import 'projects/a-lib/src/theme/theme';
 
 //Custom Styles
+html,
 body {
-  margin: 0;
-  height: 2000px;
+  height: 100%;
+}
+
+body {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: $white;
 }
