@@ -4,8 +4,8 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
-    declarations: [HomePageComponent],
-    imports: [CommonModule, PagesRoutingModule],
-    exports: [HomePageComponent],
+  declarations: [HomePageComponent],
+  imports: [CommonModule, PagesRoutingModule],
+  exports: [HomePageComponent],
 })
 export class PagesModule {}
