@@ -1,2 +1,9 @@
 //Import Theme
 @import 'projects/a-lib/src/theme/theme';
+
+//Custom Styles
+body {
+  margin: 0;
+  height: 2000px;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
