@@ -1,10 +1,11 @@
 //Import Theme
-@import 'projects/a-lib/src/theme/theme';
+@import 'projects/a-lib/src/theme/personal-theme';
 
 //Custom Styles
 html,
 body {
   height: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
