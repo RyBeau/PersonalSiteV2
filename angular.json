@@ -67,10 +67,7 @@
             "aot": true,
             "assets": ["projects/personal-site/src/favicon.ico", "projects/personal-site/src/assets"],
             "styles": ["projects/personal-site/src/styles.scss"],
-            "scripts": [],
-            "stylePreprocessorOptions": {
-              "includePaths": ["./"]
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
