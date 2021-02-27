@@ -1,6 +1,7 @@
 stages:
   - test
   - build
+  - staging
 
 test:
   stage: test
@@ -24,3 +25,6 @@ build:
     key: yarn-path
     paths:
       - node_modules
+  artifacts:
+    paths:
+      - dist/
