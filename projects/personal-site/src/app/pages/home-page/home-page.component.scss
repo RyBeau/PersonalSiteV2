@@ -1,0 +1,31 @@
+@import 'projects/a-lib/src/theme/bootstrap-base';
+
+.title-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+.shadow-text {
+  text-shadow: 0px 10px 10px $black;
+}
+
+@include media-breakpoint-up(sm) {
+  .title-wrapper {
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

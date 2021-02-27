@@ -18,7 +18,10 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/a-lib/tsconfig.lib.json",
-            "project": "projects/a-lib/ng-package.json"
+            "project": "projects/a-lib/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["./node_modules"]
+            }
           },
           "configurations": {
             "production": {
@@ -56,7 +59,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/PersonalSite",
+            "outputPath": "dist/personal-site",
             "index": "projects/personal-site/src/index.html",
             "main": "projects/personal-site/src/main.ts",
             "polyfills": "projects/personal-site/src/polyfills.ts",
@@ -99,18 +102,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PersonalSite:build"
+            "browserTarget": "personal-site:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "PersonalSite:build:production"
+              "browserTarget": "personal-site:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PersonalSite:build"
+            "browserTarget": "personal-site:build"
           }
         },
         "test": {
@@ -135,11 +138,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "projects/personal-site/e2e/protractor.conf.js",
-            "devServerTarget": "PersonalSite:serve"
+            "devServerTarget": "personal-site:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "PersonalSite:serve:production"
+              "devServerTarget": "personal-site:serve:production"
             }
           }
         }

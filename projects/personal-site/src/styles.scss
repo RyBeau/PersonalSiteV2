@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+//Import Theme
+@import 'projects/a-lib/src/theme/personal-theme';
+
+//Custom Styles
+html,
+body {
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: $white;
+}
