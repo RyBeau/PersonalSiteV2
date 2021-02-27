@@ -1,0 +1,21 @@
+version: '3'
+
+personal-site:
+  image: nginx
+  volumes:
+   - ./templates:/etc/nginx/templates
+  ports:
+   - "16000:80"
+  environment:
+   - NGINX_HOST=foobar.com
+   - NGINX_PORT=80
+   networks:
+   - traefik-backend
+  labels:
+    traefik.enable: true
+    traefik.web.port: 15000
+    traefik.gitlab.frontend.rule: 'Host:gitlab.343gs.local.nz'
+
+networks:
+  traefik-backend:
+    external: true

@@ -28,3 +28,9 @@ build:
   artifacts:
     paths:
       - dist/
+
+docker:
+  image: docker:latest
+  stage: build
+  before_script:
+    - echo "$DOCKER_REGISTRY_PASS" | docker login $DOCKER_REGISTRY --username $DOCKER_REGISTRY_USER --password-stdin
